@@ -1,0 +1,43 @@
+#tienda-container {
+	height: 45vh;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 20px;
+}
+
+#tienda-container h2 {
+	font-size: 2rem;
+	margin: 1% 0;
+}
+
+#upgrade-list li {
+	font-size: 1rem;
+	list-style: none;
+	border-radius: 15px;
+	width: 60vw;
+	margin-bottom: 1%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#upgrade-list li button {
+	width: 100%;
+	border-radius: 15px;
+}
+#upgrade-list li button:hover {
+	border: 1px solid yellow;
+}
+
+#upgrade-list {
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+}
+
+#upgrade-list li button h3 {
+	margin: 0.5% 0;
+}

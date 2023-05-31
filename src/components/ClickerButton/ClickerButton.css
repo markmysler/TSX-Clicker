@@ -1,0 +1,12 @@
+#clicker-button {
+	border-radius: 100%;
+	width: 15vw;
+	height: 15vw;
+	min-width: 170px;
+	min-height: 170px;
+	font-size: 2rem;
+	color: green;
+}
+#clicker-button:hover {
+	border: 1px solid yellow;
+}
