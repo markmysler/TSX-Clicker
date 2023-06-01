@@ -31,7 +31,6 @@ export class Player {
 			selctedUpgrade!.price = Math.round(selctedUpgrade!.price * 1.2);
 			return true;
 		} else {
-			console.log("Saldo insuficiente");
 			return false;
 		}
 	}
@@ -68,6 +67,5 @@ export class Player {
 				}).then(() => window.location.reload());
 			}
 		}
-		console.log(purchasedUpgrades);
 	}
 }
