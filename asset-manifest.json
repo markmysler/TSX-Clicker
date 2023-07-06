@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TSX-Clicker/static/css/main.68033303.css",
-    "main.js": "/TSX-Clicker/static/js/main.f61c7bd0.js",
+    "main.css": "/TSX-Clicker/static/css/main.9c27ef7f.css",
+    "main.js": "/TSX-Clicker/static/js/main.da74a078.js",
     "index.html": "/TSX-Clicker/index.html",
-    "main.68033303.css.map": "/TSX-Clicker/static/css/main.68033303.css.map",
-    "main.f61c7bd0.js.map": "/TSX-Clicker/static/js/main.f61c7bd0.js.map"
+    "main.9c27ef7f.css.map": "/TSX-Clicker/static/css/main.9c27ef7f.css.map",
+    "main.da74a078.js.map": "/TSX-Clicker/static/js/main.da74a078.js.map"
   },
   "entrypoints": [
-    "static/css/main.68033303.css",
-    "static/js/main.f61c7bd0.js"
+    "static/css/main.9c27ef7f.css",
+    "static/js/main.da74a078.js"
   ]
 }
