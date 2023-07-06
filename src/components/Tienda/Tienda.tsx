@@ -13,6 +13,8 @@ type TiendaProps = {
 	setPlayerMulti: any;
 	setPlayerIncomePerClick: any;
 	setPlayerCPS: any;
+	setCritChance: any;
+	setCritPower: any;
 };
 
 const Tienda: React.FC<TiendaProps> = ({
@@ -22,7 +24,11 @@ const Tienda: React.FC<TiendaProps> = ({
 	setPlayerMulti,
 	setPlayerIncomePerClick,
 	setPlayerCPS,
+	setCritChance,
+	setCritPower,
 }) => {
+	const purchasedSingleBuy: string[] = [];
+
 	const handleBuyUpgrade = (name: string) => {
 		if (Player.buyUpgrade(name)) {
 			setUpdatedUpgradeList((prevList: Upgrade[]) =>
@@ -36,6 +42,17 @@ const Tienda: React.FC<TiendaProps> = ({
 						: item
 				)
 			);
+			const singleBuyArr = ["critPower4", "critPower8", "critPower16"];
+
+			if (singleBuyArr.includes(name)) {
+				purchasedSingleBuy.push(name);
+				const index = updatedUpgradeList.findIndex(
+					(i: Upgrade) => i.name === name
+				);
+				setUpdatedUpgradeList((prevList: Upgrade[]) =>
+					prevList.filter((i) => !purchasedSingleBuy.includes(i.name))
+				);
+			}
 		} else {
 			swal(
 				"Fondos insuficientes",
@@ -49,6 +66,8 @@ const Tienda: React.FC<TiendaProps> = ({
 		setPlayerIncomePerClick(Player.rawEarningsPerClick * Player.multiplier);
 		setPlayerCPS(Player.clicksPerSec);
 		setBankBalance(Player.bank);
+		setCritChance(Player.critChance);
+		setCritPower(Player.critPower);
 	};
 	useEffect(() => {
 		// Update the updatedUpgradeList state when Player.playerUpgrades changes

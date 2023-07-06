@@ -2,16 +2,24 @@ import { upgradeList } from "./upgradeClass";
 import swal from "sweetalert";
 
 export class Player {
-	static bank: number = 0;
+	static bank: number = 1000000;
 	static playerUpgrades: { name: string; purchased: number }[] = [];
 	static rawEarningsPerClick: number = 1;
 	static multiplier: number = 1;
 	static earningsPerClick: number =
 		this.rawEarningsPerClick * this.multiplier;
 	static clicksPerSec: number = 0;
+	static critChance: number = 1;
+	static critPower: number = 2;
 
 	static buttonClick() {
-		Player.bank += this.rawEarningsPerClick * this.multiplier;
+		const random = Math.random() * 100;
+		if (random <= this.critChance) {
+			Player.bank +=
+				this.rawEarningsPerClick * this.multiplier * this.critPower;
+		} else {
+			Player.bank += this.rawEarningsPerClick * this.multiplier;
+		}
 	}
 	static buyUpgrade(name: string) {
 		const selctedUpgrade = upgradeList.find((item) => item.name === name);
@@ -46,6 +54,8 @@ export class Player {
 		this.rawEarningsPerClick = 1;
 		this.multiplier = 1;
 		this.clicksPerSec = 0;
+		this.critChance = 1;
+		this.critPower = 2;
 		for (let i = 0; i < purchasedUpgrades.length; i++) {
 			if (purchasedUpgrades[i]?.type === "+") {
 				this.rawEarningsPerClick +=
@@ -59,6 +69,12 @@ export class Player {
 				this.clicksPerSec +=
 					purchasedUpgrades[i]!.value *
 					purchasedUpgrades[i]!.purchased;
+			} else if (purchasedUpgrades[i]?.type === "crit") {
+				this.critChance +=
+					purchasedUpgrades[i]!.value *
+					purchasedUpgrades[i]!.purchased;
+			} else if (purchasedUpgrades[i]?.type === "critPower") {
+				this.critPower = purchasedUpgrades[i]!.value;
 			} else if (purchasedUpgrades[i]?.type === "Win") {
 				swal({
 					title: "Felicitaciones!",

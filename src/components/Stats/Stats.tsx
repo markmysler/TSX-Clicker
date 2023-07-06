@@ -7,6 +7,8 @@ type StatsProps = {
 	playerMulti: number;
 	playerIncomePerClick: number;
 	playerCPS: number;
+	critChance: number;
+	critPower: number;
 };
 
 const Stats: React.FC<StatsProps> = ({
@@ -14,6 +16,8 @@ const Stats: React.FC<StatsProps> = ({
 	playerMulti,
 	playerIncomePerClick,
 	playerCPS,
+	critChance,
+	critPower,
 }) => {
 	return (
 		<div id="stats-parent">
@@ -33,6 +37,12 @@ const Stats: React.FC<StatsProps> = ({
 				</li>
 				<li>
 					Clicks por segundo: <span>{playerCPS.toFixed(1)}cps</span>
+				</li>
+				<li>
+					Probabilidad de critico: <span>{critChance}%</span>
+				</li>
+				<li>
+					Poder de critico: <span>{critPower}x</span>
 				</li>
 			</ul>
 		</div>

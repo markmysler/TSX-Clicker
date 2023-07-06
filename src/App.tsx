@@ -22,6 +22,8 @@ function App() {
 		Player.earningsPerClick
 	);
 	const [playerCPS, setPlayerCPS] = useState(Player.clicksPerSec);
+	const [critChance, setCritChance] = useState(Player.critChance);
+	const [critPower, setCritPower] = useState(Player.critPower);
 	let IntervId: any;
 
 	function clickEverySecond() {
@@ -47,6 +49,8 @@ function App() {
 					playerMulti={playerMulti}
 					playerIncomePerClick={playerIncomePerClick}
 					playerCPS={playerCPS}
+					critChance={critChance}
+					critPower={critPower}
 				/>
 				<ClickerButton setBankBalance={setBankBalance} />
 			</section>
@@ -58,6 +62,8 @@ function App() {
 					setPlayerMulti={setPlayerMulti}
 					setPlayerIncomePerClick={setPlayerIncomePerClick}
 					setPlayerCPS={setPlayerCPS}
+					setCritPower={setCritPower}
+					setCritChance={setCritChance}
 				/>
 			</section>
 		</>

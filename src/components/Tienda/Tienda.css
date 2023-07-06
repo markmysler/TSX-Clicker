@@ -1,5 +1,5 @@
 #tienda-container {
-	height: 45vh;
+	height: 55vh;
 	width: 80vw;
 	display: flex;
 	flex-direction: column;
@@ -17,8 +17,7 @@
 	font-size: 1rem;
 	list-style: none;
 	border-radius: 15px;
-	width: 60vw;
-	margin-bottom: 1%;
+	width: 40vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -36,6 +35,9 @@
 	overflow-y: scroll;
 	margin: 0;
 	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
 }
 
 #upgrade-list li button h3 {

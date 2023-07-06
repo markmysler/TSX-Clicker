@@ -42,6 +42,49 @@ const CPSPlusOne = new Upgrade(
 	"CPS",
 	1
 );
+const critChancePlus1 = new Upgrade(
+	"critChancePlus1",
+	50000,
+	"Probabilidad de critico +1%",
+	"crit",
+	1
+);
+const critChancePlus3 = new Upgrade(
+	"critChancePlus3",
+	1000000,
+	"Probabilidad de critico +3%",
+	"crit",
+	3
+);
+const critChancePlus8 = new Upgrade(
+	"critChancePlus8",
+	50000000,
+	"Probabilidad de critico +8%",
+	"crit",
+	8
+);
+
+const critPower4 = new Upgrade(
+	"critPower4",
+	50000,
+	"Poder de critico x4",
+	"critPower",
+	4
+);
+const critPower8 = new Upgrade(
+	"critPower8",
+	5000000,
+	"Poder de critico x8",
+	"critPower",
+	8
+);
+const critPower16 = new Upgrade(
+	"critPower16",
+	50000000,
+	"Poder de critico x16",
+	"critPower",
+	16
+);
 
 const winCondition = new Upgrade("winCondition", 1000000000, "Ganar", "Win", 0);
 
@@ -55,5 +98,11 @@ export const upgradeList = [
 	CPSPlusZeroPointOne,
 	CPSPlusZeroPointFive,
 	CPSPlusOne,
+	critChancePlus1,
+	critChancePlus3,
+	critChancePlus8,
+	critPower4,
+	critPower8,
+	critPower16,
 	winCondition,
 ];

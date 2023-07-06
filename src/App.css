@@ -6,12 +6,12 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	height: 50vh;
+	height: 45vh;
 	align-items: center;
 	gap: 20px;
 }
 #bottom-section {
-	height: 50vh;
+	height: 55vh;
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
