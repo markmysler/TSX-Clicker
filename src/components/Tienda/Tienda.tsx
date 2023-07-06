@@ -46,9 +46,6 @@ const Tienda: React.FC<TiendaProps> = ({
 
 			if (singleBuyArr.includes(name)) {
 				purchasedSingleBuy.push(name);
-				const index = updatedUpgradeList.findIndex(
-					(i: Upgrade) => i.name === name
-				);
 				setUpdatedUpgradeList((prevList: Upgrade[]) =>
 					prevList.filter((i) => !purchasedSingleBuy.includes(i.name))
 				);

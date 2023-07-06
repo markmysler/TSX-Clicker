@@ -24,20 +24,30 @@ function App() {
 	const [playerCPS, setPlayerCPS] = useState(Player.clicksPerSec);
 	const [critChance, setCritChance] = useState(Player.critChance);
 	const [critPower, setCritPower] = useState(Player.critPower);
-	let IntervId: any;
+	const [intervalIsOn, setIntervalIsOn] = useState(false);
+
+	function setIntervalOn() {
+		window.setInterval(clickEverySecond, 1000);
+	}
 
 	function clickEverySecond() {
-		Player.bank += playerIncomePerClick * playerCPS;
+		if (Player.probability(Player.critChance)) {
+			Player.bank +=
+				Player.clicksPerSec *
+				Player.earningsPerClick *
+				Player.critPower;
+		} else {
+			Player.bank += Player.clicksPerSec * Player.earningsPerClick;
+		}
 		setBankBalance(Player.bank);
 	}
 
-	function setIntervalOn() {
-		IntervId = window.setInterval(clickEverySecond, 1000);
-	}
-
 	useEffect(() => {
-		if (playerCPS > 0 && !IntervId) {
-			setIntervalOn();
+		if (!intervalIsOn) {
+			if (Player.clicksPerSec > 0) {
+				setIntervalOn();
+				setIntervalIsOn(true);
+			}
 		}
 	}, [playerCPS]);
 

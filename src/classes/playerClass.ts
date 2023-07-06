@@ -2,7 +2,7 @@ import { upgradeList } from "./upgradeClass";
 import swal from "sweetalert";
 
 export class Player {
-	static bank: number = 0;
+	static bank: number = 100000000;
 	static playerUpgrades: { name: string; purchased: number }[] = [];
 	static rawEarningsPerClick: number = 1;
 	static multiplier: number = 1;
@@ -13,13 +13,15 @@ export class Player {
 	static critPower: number = 2;
 
 	static buttonClick() {
-		const random = Math.random() * 100;
-		if (random <= this.critChance) {
+		if (this.probability(this.critChance)) {
 			Player.bank +=
 				this.rawEarningsPerClick * this.multiplier * this.critPower;
 		} else {
-			Player.bank += this.rawEarningsPerClick * this.multiplier;
+			Player.bank += this.earningsPerClick;
 		}
+	}
+	static probability(n: number) {
+		return !!n && Math.random() * 100 <= n;
 	}
 	static buyUpgrade(name: string) {
 		const selctedUpgrade = upgradeList.find((item) => item.name === name);
