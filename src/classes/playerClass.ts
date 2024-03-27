@@ -2,7 +2,7 @@ import { upgradeList } from "./upgradeClass";
 import swal from "sweetalert";
 
 export class Player {
-	static bank: number = 100000000;
+	static bank: number = 0;
 	static playerUpgrades: { name: string; purchased: number }[] = [];
 	static rawEarningsPerClick: number = 1;
 	static multiplier: number = 1;
