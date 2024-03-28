@@ -12,6 +12,7 @@ class Upgrade {
 const plusOnePerClick = new Upgrade("+1", 10, "+1$ por click", "+", 1);
 const plusFivePerClick = new Upgrade("+5", 100, "+5$ por click", "+", 5);
 const plusTenPerClick = new Upgrade("+10", 1000, "+10$ por click", "+", 10);
+
 const plusZeroPointTwoX = new Upgrade(
 	"+0.2x",
 	5000,
@@ -21,9 +22,10 @@ const plusZeroPointTwoX = new Upgrade(
 );
 const plusOneX = new Upgrade("+1x", 50000, "Multiplicador + 1x", "*", 1);
 const plusTwoX = new Upgrade("+2x", 200000, "Multiplicador + 2x", "*", 2);
+
 const CPSPlusZeroPointOne = new Upgrade(
 	"+0.1CPS",
-	100000,
+	50000,
 	"Clicks por segundo + 0.1",
 	"CPS",
 	0.1
@@ -105,4 +107,6 @@ export const upgradeList = [
 	critPower8,
 	critPower16,
 	winCondition,
-];
+].sort((a: any, b: any) => {
+	return a.price - b.price;
+});

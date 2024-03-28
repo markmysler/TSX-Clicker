@@ -19,7 +19,7 @@ function App() {
 		useState<Upgrade[]>(upgradeList);
 	const [playerMulti, setPlayerMulti] = useState(Player.multiplier);
 	const [playerIncomePerClick, setPlayerIncomePerClick] = useState(
-		Player.earningsPerClick
+		Player.rawEarningsPerClick
 	);
 	const [playerCPS, setPlayerCPS] = useState(Player.clicksPerSec);
 	const [critChance, setCritChance] = useState(Player.critChance);
@@ -34,10 +34,14 @@ function App() {
 		if (Player.probability(Player.critChance)) {
 			Player.bank +=
 				Player.clicksPerSec *
-				Player.earningsPerClick *
+				Player.rawEarningsPerClick *
+				Player.multiplier *
 				Player.critPower;
 		} else {
-			Player.bank += Player.clicksPerSec * Player.earningsPerClick;
+			Player.bank +=
+				Player.clicksPerSec *
+				Player.rawEarningsPerClick *
+				Player.multiplier;
 		}
 		setBankBalance(Player.bank);
 	}

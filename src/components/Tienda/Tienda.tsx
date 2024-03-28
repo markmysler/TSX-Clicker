@@ -32,15 +32,19 @@ const Tienda: React.FC<TiendaProps> = ({
 	const handleBuyUpgrade = (name: string) => {
 		if (Player.buyUpgrade(name)) {
 			setUpdatedUpgradeList((prevList: Upgrade[]) =>
-				prevList.map((item) =>
-					item.name === name
-						? {
-								...item,
-								price: Math.round(item.price * 1.2),
-								purchased: item.purchased + 1,
-						  }
-						: item
-				)
+				prevList
+					.map((item) =>
+						item.name === name
+							? {
+									...item,
+									price: Math.round(item.price * 1.2),
+									purchased: item.purchased + 1,
+							  }
+							: item
+					)
+					.sort((a: any, b: any) => {
+						return a.price - b.price;
+					})
 			);
 			const singleBuyArr = ["critPower4", "critPower8", "critPower16"];
 
@@ -60,7 +64,7 @@ const Tienda: React.FC<TiendaProps> = ({
 
 		Player.updateStats();
 		setPlayerMulti(Player.multiplier);
-		setPlayerIncomePerClick(Player.rawEarningsPerClick * Player.multiplier);
+		setPlayerIncomePerClick(Player.rawEarningsPerClick);
 		setPlayerCPS(Player.clicksPerSec);
 		setBankBalance(Player.bank);
 		setCritChance(Player.critChance);
@@ -85,7 +89,10 @@ const Tienda: React.FC<TiendaProps> = ({
 				<ul id="upgrade-list">
 					{updatedUpgradeList.map((item: Upgrade) => (
 						<li key={item.name}>
-							<button onClick={() => handleBuyUpgrade(item.name)}>
+							<button
+								onClick={() => handleBuyUpgrade(item.name)}
+								disabled={item.price > Player.bank}
+							>
 								<h3>{item.description}</h3>
 								<div>Precio: {formatNumber(item.price)}$</div>
 								<div>Comprados: {item.purchased}</div>

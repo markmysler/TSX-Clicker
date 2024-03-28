@@ -17,7 +17,7 @@ export class Player {
 			Player.bank +=
 				this.rawEarningsPerClick * this.multiplier * this.critPower;
 		} else {
-			Player.bank += this.earningsPerClick;
+			Player.bank += this.rawEarningsPerClick * this.multiplier;
 		}
 	}
 	static probability(n: number) {
