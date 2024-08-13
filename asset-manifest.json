@@ -1,13 +1,26 @@
 {
   "files": {
-    "main.css": "/TSX-Clicker/static/css/main.01d5c186.css",
-    "main.js": "/TSX-Clicker/static/js/main.f1be9ee9.js",
+    "main.css": "/TSX-Clicker/static/css/main.ebff60f1.css",
+    "main.js": "/TSX-Clicker/static/js/main.6d9663bb.js",
+    "static/media/20.png": "/TSX-Clicker/static/media/20.ee34d3a4a36c4d313bd1.png",
+    "static/media/10000.png": "/TSX-Clicker/static/media/10000.7373d44d981c7071cdd3.png",
+    "static/media/100.png": "/TSX-Clicker/static/media/100.d51d5f2b07611da669c0.png",
+    "static/media/10.png": "/TSX-Clicker/static/media/10.77b3f5e6ecc36c9ce32a.png",
+    "static/media/2000.png": "/TSX-Clicker/static/media/2000.1b6b0f0cc12415bfe051.png",
+    "static/media/1.png": "/TSX-Clicker/static/media/1.710be8f914869bd641af.png",
+    "static/media/1000.png": "/TSX-Clicker/static/media/1000.cafb1754d9714ce07d1c.png",
+    "static/media/500.png": "/TSX-Clicker/static/media/500.19363862c84efc09adb5.png",
+    "static/media/200.png": "/TSX-Clicker/static/media/200.52ad9992d3f94c21bfdc.png",
+    "static/media/50.png": "/TSX-Clicker/static/media/50.0e694467fed8766f78bc.png",
+    "static/media/2.png": "/TSX-Clicker/static/media/2.30fcd50e391e1979f8f9.png",
+    "static/media/5.png": "/TSX-Clicker/static/media/5.f27da716398c66d33ad2.png",
+    "static/media/5000.png": "/TSX-Clicker/static/media/5000.7acb1aef6a4c9099e843.png",
     "index.html": "/TSX-Clicker/index.html",
-    "main.01d5c186.css.map": "/TSX-Clicker/static/css/main.01d5c186.css.map",
-    "main.f1be9ee9.js.map": "/TSX-Clicker/static/js/main.f1be9ee9.js.map"
+    "main.ebff60f1.css.map": "/TSX-Clicker/static/css/main.ebff60f1.css.map",
+    "main.6d9663bb.js.map": "/TSX-Clicker/static/js/main.6d9663bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.01d5c186.css",
-    "static/js/main.f1be9ee9.js"
+    "static/css/main.ebff60f1.css",
+    "static/js/main.6d9663bb.js"
   ]
 }
