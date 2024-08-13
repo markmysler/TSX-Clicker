@@ -25,6 +25,7 @@ function App() {
 	const [critChance, setCritChance] = useState(Player.critChance);
 	const [critPower, setCritPower] = useState(Player.critPower);
 	const [intervalIsOn, setIntervalIsOn] = useState(false);
+	const [textColor, setTextColor] = useState("black");
 
 	function setIntervalOn() {
 		window.setInterval(clickEverySecond, 1000);
@@ -65,8 +66,12 @@ function App() {
 					playerCPS={playerCPS}
 					critChance={critChance}
 					critPower={critPower}
+					textColor={textColor}
 				/>
-				<ClickerButton setBankBalance={setBankBalance} />
+				<ClickerButton
+					setBankBalance={setBankBalance}
+					setTextColor={setTextColor}
+				/>
 			</section>
 			<section id="bottom-section">
 				<Tienda

@@ -9,6 +9,7 @@ type StatsProps = {
 	playerCPS: number;
 	critChance: number;
 	critPower: number;
+	textColor: string;
 };
 
 const Stats: React.FC<StatsProps> = ({
@@ -18,13 +19,17 @@ const Stats: React.FC<StatsProps> = ({
 	playerCPS,
 	critChance,
 	critPower,
+	textColor,
 }) => {
 	return (
 		<div id="stats-parent">
 			<h2>Progreso</h2>
 			<ul id="stats-container">
 				<li>
-					Banco: <span>{formatNumber(Math.round(bankBalance))}$</span>
+					Banco:{" "}
+					<span style={{ color: textColor }}>
+						{formatNumber(Math.round(bankBalance))}$
+					</span>
 				</li>
 
 				<li>

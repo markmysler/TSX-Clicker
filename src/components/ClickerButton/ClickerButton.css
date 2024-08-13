@@ -1,12 +1,15 @@
 #clicker-button {
-	border-radius: 100%;
-	width: 15vw;
-	height: 15vw;
+	width: 25rem;
+	height: 20rem;
 	min-width: 170px;
 	min-height: 170px;
 	font-size: 2rem;
 	color: green;
-}
-#clicker-button:hover {
-	border: 1px solid yellow;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-clip: content-box;
+	border: none;
+	background-color: white;
+	padding: 0;
 }
