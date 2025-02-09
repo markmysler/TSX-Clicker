@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TSX-Clicker/static/css/main.2054c7cb.css",
-    "main.js": "/TSX-Clicker/static/js/main.6d9663bb.js",
+    "main.css": "/TSX-Clicker/static/css/main.c998a9e4.css",
+    "main.js": "/TSX-Clicker/static/js/main.e7f30346.js",
     "static/media/20.png": "/TSX-Clicker/static/media/20.ee34d3a4a36c4d313bd1.png",
     "static/media/10000.png": "/TSX-Clicker/static/media/10000.7373d44d981c7071cdd3.png",
     "static/media/100.png": "/TSX-Clicker/static/media/100.d51d5f2b07611da669c0.png",
@@ -16,11 +16,11 @@
     "static/media/5.png": "/TSX-Clicker/static/media/5.f27da716398c66d33ad2.png",
     "static/media/5000.png": "/TSX-Clicker/static/media/5000.7acb1aef6a4c9099e843.png",
     "index.html": "/TSX-Clicker/index.html",
-    "main.2054c7cb.css.map": "/TSX-Clicker/static/css/main.2054c7cb.css.map",
-    "main.6d9663bb.js.map": "/TSX-Clicker/static/js/main.6d9663bb.js.map"
+    "main.c998a9e4.css.map": "/TSX-Clicker/static/css/main.c998a9e4.css.map",
+    "main.e7f30346.js.map": "/TSX-Clicker/static/js/main.e7f30346.js.map"
   },
   "entrypoints": [
-    "static/css/main.2054c7cb.css",
-    "static/js/main.6d9663bb.js"
+    "static/css/main.c998a9e4.css",
+    "static/js/main.e7f30346.js"
   ]
 }
