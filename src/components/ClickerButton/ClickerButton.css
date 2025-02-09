@@ -1,6 +1,7 @@
 #clicker-button {
-	width: 25rem;
-	height: 20rem;
+	width: 100%;
+	max-width: 50vw;
+	height: 10rem;
 	min-width: 170px;
 	min-height: 170px;
 	font-size: 2rem;
